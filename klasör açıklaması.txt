@@ -1,0 +1,4 @@
+tarih: 05.06.20
+açıklama: kaggle disaster or not disaster problemi için yapılmış nlp dosyası
+
+ver001jup dosyanın jupyter versiyonu
