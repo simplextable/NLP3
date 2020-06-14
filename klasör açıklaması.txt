@@ -2,3 +2,45 @@ tarih: 05.06.20
 açıklama: kaggle disaster or not disaster problemi için yapılmış nlp dosyası
 
 ver001jup dosyanın jupyter versiyonu
+
+ver002jup diğer tf id modelleri denendi. filleri mastar haline getirdik. puan pek artmadı.
+
+ver003jup spellchecker eklendi. ama uzun sürdüğünden daha çalıştırılamadı.
+
+açıklama: burada ver003 ile v004 arasında bir fark var.
+
+ver001gun: kaggle'da aynı problemin güneş tarafından çözülmüş versiyonunu gerçeklemeye çalıştık. gun eklentisi güneşi temsil ediyor.
+
+ver001a: güneşin kodlarının benzerini tekrar sıfırdan kendimiz yapmaya çalışacağız. işlemler yaptık. sonuç pek değişmedi. çünkü zaten ilk versiyonda
+	sildiğimiz noktalamalar glove temizliği ile aynı kapıya çıkıyormuş. ver002a'da feature engineering'den bulduğumuz sütunlar eklenip denenecek.
+	ayrıca kfold ve güneşin modeli eklenerek denenecek. 
+
+
+ver002a: ver001a'da yapılması istenen değişiklikler denenecek. bu versiyonda yeni featureları zor da olsa ekledik ve puan düştü. nümerik featureları 1-0 arası
+	scale etmez isek çok fazla düştü. kodu sıçtık sıvadık. o yüzden ver001a'nın kopyasında devam edeceğiz.
+
+ver003a: ver001a'dan modeli denemeye devam ediyoruz. bert model, cross validation gibi kod blokları denenip puana bakılacak. şimdilik ilerleme sağlanamadı.
+
+ver001c: bu dosyada model kısmını bambaşka bir yapay sinir ağı modelini buraya uyarlamaya çalıştık. modeli yükleyince 0.5 sonuç verdi.
+
+ver002c: naive bayes paddingsiz bir şekilde denenip sonuç gözlenecek. ver001'deki puan düşüklüğünün padding'den ileri gelip gelmediği anlaşılacak.
+	Sonuç: evet. hakkaten ya paddingten veya test verisini tfidf yaparken ayrıca fit ettirmediğimizden veya modelden dolayı düşük puan geliyor. 
+
+ver003c: paddingde sorun yokmuş. padding yapmaya gerek de yokmuş tf idf'i doğru yapmak yetiyormuş. yapay sinir ağı kullandık. 0.74 sonuç aldık. burada epoch = 3. ama opti
+	mum rakam 4'müş.
+
+ver004c: ver003c'den devam. yeni oluşturduğumuz feature'lardan word_count modele eklendi. sonuç 0.79243
+
+lstm1: ver003c'den devam edildi. burada lstm modeli deniyoruz. sonuç 0.74 geldi. 	
+
+11062020_12.csv : ver004c dosyası sonucunda hazırladığımız ama daha yüklemediğimiz csv dosyası.
+
+ver005c: ver004c'de eklediğimiz feature'ın yanına diğer featurelar da eklenecek. unique_word_count eklendi. score bir tık düştü. 0.79141. aynı dosyanın iki farklı 
+	farklı yapay sinir ağı çalıştırması versiyonunu yükledim. ilkinde val_accurancy: 80 geldi. ikincisinde 81.5 geldi. ama kaggle'daki sonuç 1 tık bile değişmedi.
+	en sonunda tüm etkili featureları ekledim. sonuç çok çok az yükseldi. 0.79742
+
+lstm2: lstm1 modeli geliştirilmeye çalışılacak.
+
+ver005c(py): ver005c'nin verileri daha iyi görmek için spyder'de uygulanmış hali. 
+
+ver006c: ver005c'nin ileri versiyonu. bu versiyonda sadece yanlış tahmin edilen cümleleri sırala. yanlarına yeni feature'ları da ekle.
