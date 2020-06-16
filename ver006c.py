@@ -270,10 +270,9 @@ from keras.layers import LSTM
 
 #BU KISIM ORJİNAL MODEL 
 model = Sequential()
-model.add(layers.Dense(10, activation = "relu", input_shape=(14847, )))
+model.add(layers.Dense(50, activation = "relu", input_shape=(14847, )))
 # Hidden - Layers
 
-model.add(layers.Dense(5, activation = "l_relu"))
 model.add(layers.Dense(1, activation = "sigmoid"))
 model.summary()
 
@@ -285,8 +284,8 @@ model.compile(
 
 results = model.fit(
  x_train_tf_idf_word, train_y,
- epochs= 11,
- batch_size = 150,
+ epochs= 25,
+ batch_size = 600,
  validation_data = (x_test_tf_idf_word, test_y)
 )
 

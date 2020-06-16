@@ -44,3 +44,8 @@ lstm2: lstm1 modeli geliştirilmeye çalışılacak.
 ver005c(py): ver005c'nin verileri daha iyi görmek için spyder'de uygulanmış hali. 
 
 ver006c: ver005c'nin ileri versiyonu. bu versiyonda sadece yanlış tahmin edilen cümleleri sırala. yanlarına yeni feature'ları da ekle.
+
+ver001d: problemin lstm ile çözülmüş versiyonu. kaggle'da bert ile lstm'yi karşılaştıran kızın çözümünden
+	yola çıkıldı.
+ver001e: başka bir kişinin çözümü izlenerek glove oluşturduk.https://www.kaggle.com/shahules/basic-eda-cleaning-and-glove
+	modele hem ham train_x dosyasını hem de glove matrisini verdik. 
