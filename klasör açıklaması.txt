@@ -1,5 +1,5 @@
 tarih: 05.06.20
-açıklama: kaggle disaster or not disaster problemi için yapılmış nlp dosyası
+açıklama: the kaggle problem "disaster or not disaster" nlp problem file.
 
 ver001jup dosyanın jupyter versiyonu
 
@@ -49,3 +49,10 @@ ver001d: problemin lstm ile çözülmüş versiyonu. kaggle'da bert ile lstm'yi 
 	yola çıkıldı.
 ver001e: başka bir kişinin çözümü izlenerek glove oluşturduk.https://www.kaggle.com/shahules/basic-eda-cleaning-and-glove
 	modele hem ham train_x dosyasını hem de glove matrisini verdik. 
+
+galba burası düzeltilmesi lazım. klasör içine atmışız. 
+v001f: colab'da bulunan dosya. kaggle'da pytorch ile problemin çözülmüş hali. https://www.kaggle.com/vadbeg/pytorch-lstm-with-disaster-tweets
+	sonuç 0.78 geldi. 
+
+v001g: titanic'de yine pytorch ile çözülmüş problem. v001f'den farkı daha yalın bir model olması. sonuç 0.82 geldi.
+	kaggle linki: https://www.kaggle.com/c/titanic
